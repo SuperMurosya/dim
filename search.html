@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Дім в найм</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<header class="header">
+
+		<div class="header__container container">
+
+			<a class="header__logo" href="/">
+
+				<div class="logo">DimVnaim</div>
+
+				<div class="logo__descr">котеджі на добу, выхідні, свята</div>
+
+			</a>
+
+			<div class="header__menu menu">
+
+				<button type="button" class="menu__icon icon-menu"><span></span><span></span><span></span></button>
+
+				<div class="bg"></div>
+
+				<nav class="menu__body">
+
+					
+
+					<button class="fa-solid fa-xmark menu__close" type="button"></button>
+
+					<ul class="menu__list">
+
+						<li class="menu__item"><a href="search.html" class="menu__link">Зняти</a></li>
+
+						<li class="menu__item"><a href="pass.html" class="menu__link">Здати</a></li>
+
+						<li class="menu__item small"><a href="about.html" class="menu__link">Про проєкт</a></li>
+
+						<li class="menu__item small"><a href="contacts.html" class="menu__link">Зворотній звязок</a></li>
+
+					</ul>
+
+				</nav>
+
+			</div>
+
+			<div class="header__info">
+
+				<div class="header__tel"><a href="tel:+380665552224">+38 066 555 22 24</a></div>
+
+				<button class="header__button button"><i class="fa-regular fa-envelope"></i>Відправити заявку</button>
+
+			</div>
+
+		</div>
+
+	</header>
+
+
+
+
+
+	<main class="search">
+		<div class="search__container container">
+
+			<div class="search__content section">
+				<div class="search__header section-header">
+					<h3>Знайдено 14 домів</h3>
+				</div>
+				<div class="section-body search__body">
+					<div class="search__sort sort">
+						<ul class="sort__items">
+							<li class="sort__item active2" id="object">№ обєкту</li>
+							<li class="sort__item" id="direction">Напрямок</li>
+							<li class="sort__item" id="fa-away">Віддаленість</li>
+							<li class="sort__item" id="count-people">Кількість людей</li>
+							<li class="sort__item" id="working-days">В будні</li>
+							<li class="sort__item" id="weekend">На вихідні</li>
+							<li class="sort__item" id="full-weekend">За цілі вихідні</li>
+							<li class="sort__item" id="new-year">На новый Рік</li>
+						</ul>
+					</div>
+					<div class="search-items">
+						<div class="search__item item-search">
+							<a class="item-search__img">
+								<img src="images/h-1.jpg" alt="">
+							</a>
+							<div class="item-search__info">
+								<div class="item-search__num">№ 55</div>
+								<div class="item-search__address">с. Височанка, вул Петрлюри, 1</div>
+								<div class="item-search__far-away">Віддаленність від <span>обласного центрку</span>
+								</div>
+								<div class="item-search__count-people">на 10 чол.</div>
+
+							</div>
+							<div class="item-search__prices">
+								<div class="item-search__price-item">10 000 грн. <span
+										class="item-search__prices-details">за добу в будні</span></div>
+								<div class="item-search__price-item">25 000 грн. <span
+										class="item-search__prices-details">за цілі вихідні</span></div>
+								<div class="item-search__price-item">20 000 грн. <span
+										class="item-search__prices-details">за сутки на вихідні</span></div>
+								<div class="item-search__price-item">30 000 грн. <span
+										class="item-search__prices-details">на новый рік</span></div>
+
+							</div>
+
+						</div>
+						<div class="search__item item-search">
+							<a class="item-search__img">
+								<img src="images/h-2.jpg" alt="">
+							</a>
+							<div class="item-search__info">
+								<div class="item-search__num">№ 55</div>
+								<div class="item-search__address">с. Височанка, вул Петрлюри, 1</div>
+								<div class="item-search__far-away">Віддаленність від <span>обласного центрку</span>
+								</div>
+								<div class="item-search__count-people">на 18-23 чол.</div>
+
+							</div>
+							<div class="item-search__prices">
+								<div class="item-search__price-item">10 000 грн. <span
+										class="item-search__prices-details">за добу в будні</span></div>
+								<div class="item-search__price-item">25 000 грн. <span
+										class="item-search__prices-details">за цілі вихідні</span></div>
+								<div class="item-search__price-item">20 000 грн. <span
+										class="item-search__prices-details">за сутки на вихідні</span></div>
+								<div class="item-search__price-item">30 000 грн. <span
+										class="item-search__prices-details">на новый рік</span></div>
+
+							</div>
+
+						</div>
+						<div class="search__item item-search">
+							<a class="item-search__img">
+								<img src="images/h-3.jpg" alt="">
+							</a>
+							<div class="item-search__info">
+								<div class="item-search__num">№ 55</div>
+								<div class="item-search__address">с. Височанка, вул Петрлюри, 1</div>
+								<div class="item-search__far-away">Віддаленність від <span>обласного центрку</span>
+								</div>
+								<div class="item-search__count-people">на 8-10 чол.</div>
+
+							</div>
+							<div class="item-search__prices">
+								<div class="item-search__price-item">10 000 грн. <span
+										class="item-search__prices-details">за добу в будні</span></div>
+								<div class="item-search__price-item">25 000 грн. <span
+										class="item-search__prices-details">за цілі вихідні</span></div>
+								<div class="item-search__price-item">20 000 грн. <span
+										class="item-search__prices-details">за сутки на вихідні</span></div>
+								<div class="item-search__price-item">30 000 грн. <span
+										class="item-search__prices-details">на новый рік</span></div>
+
+							</div>
+
+						</div>
+						<div class="search__item item-search">
+							<a class="item-search__img">
+								<img src="images/h-4.jpg" alt="">
+							</a>
+							<div class="item-search__info">
+								<div class="item-search__num">№ 55</div>
+								<div class="item-search__address">с. Височанка, вул Петрлюри, 1</div>
+								<div class="item-search__far-away">Віддаленність від <span>обласного центрку</span>
+								</div>
+								<div class="item-search__count-people">на 10-15 чол.</div>
+
+							</div>
+							<div class="item-search__prices">
+								<div class="item-search__price-item">10 000 грн. <span
+										class="item-search__prices-details">за добу в будні</span></div>
+								<div class="item-search__price-item">25 000 грн. <span
+										class="item-search__prices-details">за цілі вихідні</span></div>
+								<div class="item-search__price-item">20 000 грн. <span
+										class="item-search__prices-details">за сутки на вихідні</span></div>
+								<div class="item-search__price-item">30 000 грн. <span
+										class="item-search__prices-details">на новый рік</span></div>
+
+							</div>
+
+						</div>
+						<div class="search__item item-search">
+							<a class="item-search__img">
+								<img src="images/h-1.jpg" alt="">
+							</a>
+							<div class="item-search__info">
+								<div class="item-search__num">№ 55</div>
+								<div class="item-search__address">с. Височанка, вул Петрлюри, 1</div>
+								<div class="item-search__far-away">Віддаленність від <span>обласного центрку</span>
+								</div>
+								<div class="item-search__count-people">на 16-20 чол.</div>
+
+							</div>
+							<div class="item-search__prices">
+								<div class="item-search__price-item">10 000 грн. <span
+										class="item-search__prices-details">за добу в будні</span></div>
+								<div class="item-search__price-item">25 000 грн. <span
+										class="item-search__prices-details">за цілі вихідні</span></div>
+								<div class="item-search__price-item">20 000 грн. <span
+										class="item-search__prices-details">за сутки на вихідні</span></div>
+								<div class="item-search__price-item">30 000 грн. <span
+										class="item-search__prices-details">на новый рік</span></div>
+
+							</div>
+
+						</div>
+						<div class="search__item item-search">
+							<a class="item-search__img">
+								<img src="images/h-2.jpg" alt="">
+							</a>
+							<div class="item-search__info">
+								<div class="item-search__num">№ 55</div>
+								<div class="item-search__address">с. Височанка, вул Петрлюри, 1</div>
+								<div class="item-search__far-away">Віддаленність від <span>обласного центрку</span>
+								</div>
+								<div class="item-search__count-people">на 20 -25 чол.</div>
+
+							</div>
+							<div class="item-search__prices">
+								<div class="item-search__price-item">10 000 грн. <span
+										class="item-search__prices-details">за добу в будні</span></div>
+								<div class="item-search__price-item">25 000 грн. <span
+										class="item-search__prices-details">за цілі вихідні</span></div>
+								<div class="item-search__price-item">20 000 грн. <span
+										class="item-search__prices-details">за сутки на вихідні</span></div>
+								<div class="item-search__price-item">30 000 грн. <span
+										class="item-search__prices-details">на новый рік</span></div>
+
+							</div>
+
+						</div>
+						<div class="search__item item-search">
+							<a class="item-search__img">
+								<img src="images/h-2.jpg" alt="">
+							</a>
+							<div class="item-search__info">
+								<div class="item-search__num">№ 55</div>
+								<div class="item-search__address">с. Височанка, вул Петрлюри, 1</div>
+								<div class="item-search__far-away">Віддаленність від <span>обласного центрку</span>
+								</div>
+								<div class="item-search__count-people">на 20 -25 чол.</div>
+
+							</div>
+							<div class="item-search__prices">
+								<div class="item-search__price-item">10 000 грн. <span
+										class="item-search__prices-details">за добу в будні</span></div>
+								<div class="item-search__price-item">25 000 грн. <span
+										class="item-search__prices-details">за цілі вихідні</span></div>
+								<div class="item-search__price-item">20 000 грн. <span
+										class="item-search__prices-details">за сутки на вихідні</span></div>
+								<div class="item-search__price-item">30 000 грн. <span
+										class="item-search__prices-details">на новый рік</span></div>
+
+							</div>
+
+						</div>
+					</div>
+					<ul class="pagination">
+						<li class="disabled">
+							<span class="arrow-left"><i class="fa-solid fa-angles-left"></i></span>
+						</li>
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li class="active"><span>3</span></li>
+						<li><span class="dots">...</span></li>
+						<li>
+							<a href="#" class="arrow-left"><i class="fa-solid fa-angles-right"></i></a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="search__sidebar">
+				<section class="filter section">
+					<div class="search__header section-header main-filter-btn">
+						<h3>Пошук<button class="filter-btn" title="Показати фільтр"> <i
+									class="fa-solid fa-filter"></i><span class="main-flt-show">показати</span></button>
+						</h3>
+					</div>
+					<div class="filter__body section-body main-filter ">
+						<!-- B_SEARCH -->
+						<form id="form_search_param" class="b-search-form" action="search.php" method="get">
+							<div class="b-search-form__body">
+								<!-- B_SEARCH ITEM-->
+								<div id="search_item_cost" class="b-search-form__item search-item"><h6 class="search-item__name">Ціна:</h6>
+									<div class="search-item__fieldset fieldset">
+										<!--										<select name="search_cost" size="1" tabindex="1">-->
+										<select name="sc" id="sc" size="1" tabindex="1">
+											<option value="1" selected="selected">За добу в будні (с ПН по ЧТ)
+											</option>
+											<option value="2">За добу ні вихідні (с ПТ по ВС)</option>
+											<option value="3">За цілі виходні (ПТ, СБ, ВС)</option>
+											<option value="4">На Новий Рік (с 31 грудня. по 02 січня.)</option>
+										</select>
+									</div>
+									<div class="ui_slider_container search-item__slider">
+										<!--									<div id="ui_slider_cost">-->
+
+										<div id="ui_slider_labels01" class="ui_slider_labels">
+											<span class="first_child less5">&lt;5</span>
+											<span>10</span>
+											<span>20</span>
+											<span>30</span>
+											<span>40</span>
+											<span class="last_child">&gt;50</span>
+										</div>
+										<div id="slider-range1"></div>
+									</div>
+									<div class="search-item__inputs">
+										<div class="search-item__input"><label id="label_a1">Від: </label> <input
+												id="amount1" name="a1" type="text" class="input_text inp"></div>
+										<div class="search-item__input"><label id="label_a2" class="fromto">До:
+											</label>
+											<input id="amount2" name="a2" type="text" class="input_text inp"><span
+												class="rur"> грн.</span>
+										</div>
+
+										<!--										<label class="rur"><span class="abso">=</span>P</label> -->
+
+									</div>
+								</div>
+								<!-- B_SEARCH ITEM-->
+								<div id="search_item_people" class="b-search-form__item search-item">
+									<h6 class="search-item__name">Кількість людей:</h6>
+									<div class="search-item__fieldset">
+										<input id="radio_convenience_1" class="radio" type="radio" name="cn" value="1"
+											checked="checked" >
+										<label for="radio_convenience_1">Комфортно</label>
+										<input id="radio_convenience_2" class="radio" type="radio" name="cn"
+											value="2" >
+										<label for="radio_convenience_2">Максимально</label>
+									</div>
+									<div class="ui_slider_container search-item__slider">
+										<div id="ui_slider_labels02" class="ui_slider_labels">
+											<span class="first_child less5">&lt;5</span>
+											<span>10</span>
+											<span>20</span>
+											<span>30</span>
+											<span>40</span>
+											<span class="last_child">&gt;50</span>
+										</div>
+										<div id="slider-range2"></div>
+									</div>
+									<div class="search-item__inputs">
+										<div class="search-item__input"><label id="label_a3">Від: </label> <input
+												id="amount3" name="a3" type="text" class="input_text" ></div>
+										<div class="search-item__input"><label id="label_a4" class="fromto">До:
+											</label>
+											<input id="amount4" name="a4" type="text" class="input_text" ><span>
+												людей</span>
+										</div>
+
+
+
+									</div>
+								</div>
+								<!-- B_SEARCH ITEM-->
+								<div id="search_item_length" class="b-search-form__item search-item">
+									<h6 class="search-item__name">Віддаленість від обл. центру</h6>
+									<div class="search-item__fieldset search-item__fieldset-direction">
+										<a id="course" class="toggle" href="#" title="">Напрямок и шосе:&nbsp;</a>
+										<input id="id_dir" type="text" class="input_dir" value="будь-яке" >
+										<input id="id_dir_all" name="dr" type="text" class="input_hide" value="" >
+									</div>
+									<div class="ui_slider_container search-item__slider">
+										<div id="ui_slider_labels03" class="ui_slider_labels">
+											<span class="first_child">0</span>
+											<span>40</span>
+											<span>80</span>
+											<span>120</span>
+											<span>160</span>
+											<span class="last_child">&gt;200</span>
+										</div>
+										<div id="slider-range3"></div>
+									</div>
+									<div class="search-item__inputs">
+										<div class="search-item__input"><label id="label_a5">Від: </label> <input
+												id="amount5" name="a5" type="text" class="input_text" ></div>
+										<div class="search-item__input"><label id="label_a6" class="fromto">До:
+											</label>
+											<input id="amount6" name="a6" type="text" class="input_text" ><span>
+												кілометрів</span>
+										</div>
+
+
+
+
+									</div>
+								</div>
+								<!-- B_SEARCH ITEM-->
+								<div id="search_item_square" class="b-search-form__item search-item">
+									<h6 class="search-item__name">Площа дому:</h6>
+									<div class="ui_slider_container search-item__slider">
+										<div id="ui_slider_labels04" class="ui_slider_labels">
+											<span class="first_child less5">&lt;50</span>
+											<span>100</span>
+											<span>150</span>
+											<span>200</span>
+											<span>250</span>
+											<span class="last_child">&gt;300</span>
+										</div>
+										<div id="slider-range4"></div>
+									</div>
+									<div class="search-item__inputs">
+										<div class="search-item__input"><label id="label_a7">Від: </label> <input
+												id="amount7" name="b1" type="text" class="input_text" ></div>
+										<div class="search-item__input"><label id="label_a8" class="fromto">До:
+											</label> <input id="amount8" name="b2" type="text"
+												class="input_text" ><span> м<sup>2</sup></span></div>
+									</div>
+								</div>
+								<!-- B_SEARCH ITEM-->
+								<div id="search_item_floors" class="b-search-form__item search-item">
+									<h6 class="search-item__name">Кількість поверхів:</h6>
+									<div class="ui_slider_container search-item__slider">
+										<div id="ui_slider_labels05" class="ui_slider_labels">
+											<span class="first_child">1</span>
+											<span>2</span>
+											<span>3</span>
+											<span>4</span>
+											<span>5</span>
+											<span class="last_child">&gt;5</span>
+										</div>
+										<div id="slider-range5"></div>
+									</div>
+									<div class="search-item__inputs">
+										<div class="search-item__input"><label id="label_a9">Від: </label> <input
+												id="amount9" name="b3" type="text" class="input_text" ></div>
+										<div class="search-item__input"><label id="label_a10" class="fromto">До:
+											</label> <input id="amount10" name="b4" type="text"
+												class="input_text" ><span> поверхів</span></div>
+
+
+
+									</div>
+								</div>
+								<!-- B_SEARCH ITEM-->
+								<div id="search_item_area" class="b-search-form__item search-item">
+									<h6 class="search-item__name">Площа ділянки:</h6>
+									<div class="ui_slider_container search-item__slider">
+										<div id="ui_slider_labels06" class="ui_slider_labels">
+											<span class="first_child less5">&lt;50</span>
+											<span>100</span>
+											<span>150</span>
+											<span>200</span>
+											<span>250</span>
+											<span class="last_child">&gt;300</span>
+										</div>
+										<div id="slider-range6"></div>
+									</div>
+									<div class="search-item__inputs">
+										<div class="search-item__input">
+											<label id="label_a11">Від: </label> <input id="amount11" name="b5"
+												type="text" class="input_text" >
+										</div>
+										<div class="search-item__input">
+											<label id="label_a12" class="fromto">До: </label> <input id="amount12"
+												name="b6" type="text" class="input_text" ><span> соток</span>
+										</div>
+									</div>
+								</div>
+								<!-- B_SEARCH ITEM-->
+								<div id="search_item_bedrooms" class="b-search-form__item search-item">
+									<h6 class="search-item__name">Кількість спалень:</h6>
+									<div class="ui_slider_container search-item__slider">
+										<div id="ui_slider_labels07" class="ui_slider_labels">
+											<span class="first_child less5">&lt;3</span>
+											<span>6</span>
+											<span>9</span>
+											<span>12</span>
+											<span>15</span>
+											<span class="last_child">&gt;18</span>
+										</div>
+										<div id="slider-range7"></div>
+									</div>
+									<div class="search-item__inputs">
+										<div class="search-item__input"><label id="label_a13">Від: </label> <input
+												id="amount13" name="b7" type="text" class="input_text" ></div>
+										<div class="search-item__input"><label id="label_a14" class="fromto">До:
+											</label> <input id="amount14" name="b8" type="text" class="input_text" >
+											<span> спалень</span>
+										</div>
+									</div>
+								</div>
+								<!-- B_SEARCH ITEM-->
+								<div id="search_item_pool" class="b-search-form__item search-item"><h6 class="search-item__name">Наявність:</h6>
+									<div class="search-item__checkbox">
+										<input type="checkbox" name="o1" id="o1" value="1"
+											checked><span>Паркинга</span><br >
+										<input type="checkbox" name="o2" id="o2" value="1"><span>Бани/сауны</span><br>
+										<input type="checkbox" name="o3" id="o3" value="1"><span>Бассейна</span><br>
+									</div>
+								</div>
+								<button class="submit button filter__btn" type="submit">Знайти котеджі</button>
+								<button class="submit button filter__btn filter__btn-reset"
+									type="reset">Скинути</button>
+
+							</div>
+						</form>
+						<!-- B_SEARCH -->
+
+					</div>
+				</section>
+			</div>
+
+
+
+
+		</div>
+
+	</main>
+
+
+	<footer class="footer">
+
+
+		<div class="footer__container container">
+
+
+			<a href="/" class="footer__logo">
+
+
+				<div class="logo">DimVnaim</div>
+
+
+				<div class="logo__descr">котеджі на добу, выхідні, свята</div>
+
+
+			</a>
+
+
+			<nav class="footer__menu footer-menu">
+
+
+				<ul class="footer-menu__list">
+
+
+					<li class="footer-menu__item"><a href="search.html" class="footer-menu__link">Зняти</a></li>
+
+
+					<li class="footer-menu__item"><a href="pass.html" class="footer-menu__link">Здати</a></li>
+
+
+					<li class="footer-menu__item small"><a href="about.html" class="footer-menu__link">Про проєкт</a></li>
+
+
+					<li class="footer-menu__item small"><a href="contacts.html" class="footer-menu__link">Є ідея?</a></li>
+
+
+				</ul>
+
+
+			</nav>
+
+
+			<div class="footer__info">
+
+
+				<div class="footer__tel"><i class="fa-solid fa-phone"></i><a href="tel:+380665552224">+38 066 555 22
+
+
+						24</a></div>
+
+
+			</div>
+
+
+	
+
+
+		</div>
+
+
+		<div class="footer__copyright">
+
+
+			<div class="footer__container container">
+
+
+				<p>Розробник © Камінська М.В.</p>
+
+
+			</div>
+
+
+		</div>
+
+
+	</footer>
+
+
+	
+
+
+	<div class="contact-form">
+
+
+	
+
+
+		<form class="contact-form__body" action="#">
+
+
+			<button class="fa-solid fa-xmark contact-form__close" type="button"></button>
+
+
+			<div class="contact-form__item">
+
+
+				<label for="name">Ім'я:</label>
+
+
+				<input type="text" id="name" name="name" required>
+
+
+			</div>
+
+
+			<div class="contact-form__item">
+
+
+				<label for="phone">Телефон:</label>
+
+
+				<input type="tel" id="phone" name="phone" required>
+
+
+			</div>
+
+
+			<div class="contact-form__item">
+
+
+				<label for="email">E-mail:</label>
+
+
+				<input type="tel" id="email" name="email">
+
+
+			</div>
+
+
+			<div class="contact-form__item">
+
+
+				<label for="message">Повідомлення:</label>
+
+
+				<textarea id="message" name="message">
+
+
+				</textarea>
+
+
+			</div>
+
+
+	
+
+
+	
+
+
+			<button class="contact-form__btn btn button" type="submit">Відправити</button>
+
+
+		</form>
+
+
+	</div>
+
+
+	
+
+
+	
+
+
+	<script src="js/jquery.min.js"></script>
+
+
+	<script src="js/jquery-ui.js"></script>
+
+
+	<script src="js/slick.min.js"></script>
+
+
+	<script src="js/main.js"></script>
+	<div class="contact-form">
+	
+		<form class="contact-form__body" action="#">
+			<button class="fa-solid fa-xmark contact-form__close" type="button"></button>
+			<div class="contact-form__item">
+				<label for="name">Ім'я:</label>
+				<input type="text" id="name" name="name" required>
+			</div>
+			<div class="contact-form__item">
+				<label for="phone">Телефон:</label>
+				<input type="tel" id="phone" name="phone" required>
+			</div>
+			<div class="contact-form__item">
+				<label for="email">E-mail:</label>
+				<input type="tel" id="email" name="email">
+			</div>
+			<div class="contact-form__item">
+				<label for="message">Повідомлення:</label>
+				<textarea id="message" name="message">				
+				</textarea>
+			</div>
+	
+	
+			<button class="contact-form__btn btn button" type="submit">Відправити</button>
+		</form>
+	
+	
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Дім в найм</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<header class="header">
+
+		<div class="header__container container">
+
+			<a class="header__logo" href="/">
+
+				<div class="logo">DimVnaim</div>
+
+				<div class="logo__descr">котеджі на добу, выхідні, свята</div>
+
+			</a>
+
+			<div class="header__menu menu">
+
+				<button type="button" class="menu__icon icon-menu"><span></span><span></span><span></span></button>
+
+				<div class="bg"></div>
+
+				<nav class="menu__body">
+
+					
+
+					<button class="fa-solid fa-xmark menu__close" type="button"></button>
+
+					<ul class="menu__list">
+
+						<li class="menu__item"><a href="search.html" class="menu__link">Зняти</a></li>
+
+						<li class="menu__item"><a href="pass.html" class="menu__link">Здати</a></li>
+
+						<li class="menu__item small"><a href="about.html" class="menu__link">Про проєкт</a></li>
+
+						<li class="menu__item small"><a href="contacts.html" class="menu__link">Зворотній звязок</a></li>
+
+					</ul>
+
+				</nav>
+
+			</div>
+
+			<div class="header__info">
+
+				<div class="header__tel"><a href="tel:+380665552224">+38 066 555 22 24</a></div>
+
+				<button class="header__button button"><i class="fa-regular fa-envelope"></i>Відправити заявку</button>
+
+			</div>
+
+		</div>
+
+	</header>
+
+
+
+
+
+	<main class="main">
+		<div class="container main__container">
+			<section class="filter section">
+				<div class="filter__header section-header main-filter-btn">
+					<h3>Пошук домів на сутки <button class="filter-btn" title="Показати фільтр"> <i
+								class="fa-solid fa-filter"></i><span class="main-flt-show">показати</span></button></h3>
+				</div>
+				<div class="filter__body section-body main-filter ">
+
+					<!-- B_SEARCH -->
+					<form id="form_search_param" class="b-search-form" action="search.php" method="get">
+						<fieldset>
+							<div class="b-search-form__body">
+								<!-- B_SEARCH ITEM-->
+								<div id="search_item_cost" class="b-search-form__item search-item">
+									<h2 class="search-item__name">Ціна:</h2>
+									<div class="search-item__fieldset fieldset">
+										<!--										<select name="search_cost" size="1" tabindex="1">-->
+										<select name="sc" id="sc" size="1" tabindex="1">
+											<option value="1" selected="selected">За добу в будні (с ПН по ЧТ)</option>
+											<option value="2">За добу ні вихідні (с ПТ по ВС)</option>
+											<option value="3">За цілі виходні (ПТ, СБ, ВС)</option>
+											<option value="4">На Новий Рік (с 31 грудня. по 02 січня.)</option>
+										</select>
+									</div>
+									<div class="ui_slider_container search-item__slider">
+										<!--									<div id="ui_slider_cost">-->
+
+										<div id="ui_slider_labels01" class="ui_slider_labels">
+											<span class="first_child less5">&lt;5</span>
+											<span>10</span>
+											<span>20</span>
+											<span>30</span>
+											<span>40</span>
+											<span class="last_child">&gt;50</span>
+										</div>
+										<div id="slider-range1"></div>
+									</div>
+									<div class="search-item__inputs">
+										<div class="search-item__input"><label id="label_a1">Від: </label> <input
+												id="amount1" name="a1" type="text" class="input_text inp" ></div>
+										<div class="search-item__input"><label id="label_a2" class="fromto">До: </label>
+											<input id="amount2" name="a2" type="text" class="input_text inp" ><span
+												class="rur"> грн.</span>
+										</div>
+
+										<!--										<label class="rur"><span class="abso">=</span>P</label> -->
+
+									</div>
+								</div>
+								<!-- B_SEARCH ITEM-->
+								<div id="search_item_people" class="b-search-form__item search-item">
+									<h2 class="search-item__name">Кількість людей:</h2>
+									<div class="search-item__fieldset">
+										<input id="radio_convenience_1" class="radio" type="radio" name="cn" value="1"
+											checked="checked" >
+										<label for="radio_convenience_1">Комфортно</label>
+										<input id="radio_convenience_2" class="radio" type="radio" name="cn"
+											value="2" >
+										<label for="radio_convenience_2">Максимально</label>
+									</div>
+									<div class="ui_slider_container search-item__slider">
+										<div id="ui_slider_labels02" class="ui_slider_labels">
+											<span class="first_child less5">&lt;5</span>
+											<span>10</span>
+											<span>20</span>
+											<span>30</span>
+											<span>40</span>
+											<span class="last_child">&gt;50</span>
+										</div>
+										<div id="slider-range2"></div>
+									</div>
+									<div class="search-item__inputs">
+										<div class="search-item__input"><label id="label_a3">Від: </label> <input
+												id="amount3" name="a3" type="text" class="input_text" ></div>
+										<div class="search-item__input"><label id="label_a4" class="fromto">До: </label>
+											<input id="amount4" name="a4" type="text" class="input_text" ><span>
+												людей</span>
+										</div>
+
+
+
+									</div>
+								</div>
+								<!-- B_SEARCH ITEM-->
+								<div id="search_item_length" class="b-search-form__item search-item">
+									<h2 class="search-item__name">Віддаленість від обл. центру:</h2>
+									<div class="search-item__fieldset search-item__fieldset-direction">
+										<a id="course" class="toggle" href="#" title="">Напрямок и шосе:&nbsp;</a>
+										<input id="id_dir" type="text" class="input_dir" value="будь-яке" >
+										<input id="id_dir_all" name="dr" type="text" class="input_hide" value="" >
+									</div>
+									<div class="ui_slider_container search-item__slider">
+										<div id="ui_slider_labels03" class="ui_slider_labels">
+											<span class="first_child">0</span>
+											<span>40</span>
+											<span>80</span>
+											<span>120</span>
+											<span>160</span>
+											<span class="last_child">&gt;200</span>
+										</div>
+										<div id="slider-range3"></div>
+									</div>
+									<div class="search-item__inputs">
+										<div class="search-item__input"><label id="label_a5">Від: </label> <input
+												id="amount5" name="a5" type="text" class="input_text" ></div>
+										<div class="search-item__input"><label id="label_a6" class="fromto">До: </label>
+											<input id="amount6" name="a6" type="text" class="input_text" ><span>
+												кілометрів</span>
+										</div>
+
+
+
+
+									</div>
+								</div>
+								<!-- B_SEARCH ITEM-->
+							</div>
+							<button class="submit button filter__btn" type="submit">Знайти котеджі</button>
+						</fieldset>
+					</form>
+					<!-- B_SEARCH -->
+
+
+				</div>
+			</section>
+
+
+			<section class="popular section">
+				<div class="popular__header section-header">
+					<h3>Популярні котеджі</h3>
+				</div>
+				<div class="popular__body section-body">
+					<div class="popular__item item-popular">
+						<a class="item-popular__address" href="#">Миру 52</a>
+						<a class="item-popular__img" href="#"><img src="images/h-4.jpg" alt=""></a>
+						<div class="item-popular__descr">
+							<div class="item-popular__adv">Низька ціна</div>
+							<div class="item-popular__people">до 10 людей</div>
+							<div class="item-popular__price">від 1000 грн</div>
+							<div class="item-popular__sqr">125 m<sup>2</sup></div>
+							<div class="item-popular__all">Всі розваги</div>
+						</div>
+					</div>
+					<div class="popular__item item-popular">
+						<a class="item-popular__address" href="#">Миру 52</a>
+						<a class="item-popular__img" href="#"><img src="images/h-1.jpg" alt=""></a>
+						<div class="item-popular__descr">
+							<div class="item-popular__adv">Низька ціна</div>
+							<div class="item-popular__people">до 10 людей</div>
+							<div class="item-popular__price">від 1000 грн</div>
+							<div class="item-popular__sqr">125 m<sup>2</sup></div>
+							<div class="item-popular__all">Всі розваги</div>
+						</div>
+					</div>
+					<div class="popular__item item-popular">
+						<a class="item-popular__address" href="#">Миру 52</a>
+						<a class="item-popular__img" href="#"><img src="images/h-2.jpg" alt=""></a>
+						<div class="item-popular__descr">
+							<div class="item-popular__adv">Низька ціна</div>
+							<div class="item-popular__people">до 10 людей</div>
+							<div class="item-popular__price">від 1000 грн</div>
+							<div class="item-popular__sqr">125 m<sup>2</sup></div>
+							<div class="item-popular__all">Всі розваги</div>
+						</div>
+					</div>
+					<div class="popular__item item-popular">
+						<a class="item-popular__address" href="#">Миру 52</a>
+						<a class="item-popular__img" href="#"><img src="images/h-3.jpg" alt=""></a>
+						<div class="item-popular__descr">
+							<div class="item-popular__adv">Низька ціна</div>
+							<div class="item-popular__people">до 10 людей</div>
+							<div class="item-popular__price">від 1000 грн</div>
+							<div class="item-popular__sqr">125 m<sup>2</sup></div>
+							<div class="item-popular__all">Всі розваги</div>
+						</div>
+					</div>
+					<div class="popular__item item-popular">
+						<a class="item-popular__address" href="#">Миру 52</a>
+						<a class="item-popular__img" href="#"><img src="images/h-4.jpg" alt=""></a>
+						<div class="item-popular__descr">
+							<div class="item-popular__adv">Низька ціна</div>
+							<div class="item-popular__people">до 10 людей</div>
+							<div class="item-popular__price">від 1000 грн</div>
+							<div class="item-popular__sqr">125 m<sup>2</sup></div>
+							<div class="item-popular__all">Всі розваги</div>
+						</div>
+					</div>
+					<div class="popular__item item-popular">
+						<a class="item-popular__address" href="#">Миру 52</a>
+						<a class="item-popular__img" href="#"><img src="images/h-1.jpg" alt=""></a>
+						<div class="item-popular__descr">
+							<div class="item-popular__adv">Низька ціна</div>
+							<div class="item-popular__people">до 10 людей</div>
+							<div class="item-popular__price">від 1000 грн</div>
+							<div class="item-popular__sqr">125 m<sup>2</sup></div>
+							<div class="item-popular__all">Всі розваги</div>
+						</div>
+					</div>
+					<div class="popular__item item-popular">
+						<a class="item-popular__address" href="#">Миру 52</a>
+						<a class="item-popular__img" href="#"><img src="images/h-2.jpg" alt=""></a>
+						<div class="item-popular__descr">
+							<div class="item-popular__adv">Низька ціна</div>
+							<div class="item-popular__people">до 10 людей</div>
+							<div class="item-popular__price">від 1000 грн</div>
+							<div class="item-popular__sqr">125 m<sup>2</sup></div>
+							<div class="item-popular__all">Всі розваги</div>
+						</div>
+					</div>
+
+
+				</div>
+			</section>
+
+			<section class="holiday section">
+
+				<div class="holiday__header section-header">
+
+					<h3>Котеджі на добу, вихідні, Новий Рік</h3>
+
+				</div>
+
+				<div class="holiday__body section-body">
+
+					<div class="popular__advantages">
+
+						<p>Далеко, далеко не словесні гори в країні голосних та приголосних текстів риб. Зібраний
+
+							Наш текст - це наш текст, що країна зла є першим? Знаки, кома вирішила! Ти дала
+
+							Необхідно, точкою якої є неінфографічний, з яких гори! </p>
+
+						<p> Без літер, що зло залишається некокорфографічними текстами, обсмаженими йому Лоремом у компілятора міста
+
+							Ipsum про велику рукописну пунктуацію реклами, сам, силует знову піднявся
+
+							! Бали - це алея його Всемогутнього Малого!
+
+							На березі, великий пробурмотів з невеликим часом промовою життя незабаром, текст є текстом. Буквоград
+
+							Ретторика власного з комою про текст якого продовжував невеликий, який підступний
+
+							Поверніть навіть текст агентства, перший рукопис! </p>
+
+						<div class="holiday__img"> <img src="images/new-year.jpg" alt="Holiday">
+
+							<img src="images/holiday.jpg" alt="Holiday">
+
+							<img src="images/holiday-2.jpg" alt="Holiday">
+
+							<img src="images/holiday-3.jpg" alt="Holiday">
+
+						</div>
+
+			
+
+						<p> Задній їх безпосередньо смажений сумний, що для текстів незабаром субтитри - це компілятор
+
+							Всемогутні проекти іпсума дали про лист Лорем, країна один відповідає океану це
+
+							Промова! Продовжуючи, летить зустріч, все живе!</p>
+
+						<p>Далеко, далеко позаду, словесні гори в країні голосних та приголосних текстів риб. Текст
+
+							Його власні праві будинки всіма, лінія Лорема, він незабаром підступний одного разу вирішив це.
+
+							Він попередив наше колись зібраний підйом.
+
+							Цей текст ipsum знову заманений рукописом, ні, ознаки дороги вирішили Лорема
+
+							Останні проекти є. Ведучи, з моменту їх пропозицій, Дикі гори, реклама зібралася
+
+							Країна живе питанням.</p>
+
+					</div>
+
+				</div>
+
+			</section>
+		</div>
+
+	</main>
+
+
+		<footer class="footer">
+
+
+			<div class="footer__container container">
+
+
+				<a href="/" class="footer__logo">
+
+
+					<div class="logo">DimVnaim</div>
+
+
+					<div class="logo__descr">котеджі на добу, выхідні, свята</div>
+
+
+				</a>
+
+
+				<nav class="footer__menu footer-menu">
+
+
+					<ul class="footer-menu__list">
+
+
+						<li class="footer-menu__item"><a href="search.html" class="footer-menu__link">Зняти</a></li>
+
+
+						<li class="footer-menu__item"><a href="pass.html" class="footer-menu__link">Здати</a></li>
+
+
+						<li class="footer-menu__item small"><a href="about.html" class="footer-menu__link">Про проєкт</a></li>
+
+
+						<li class="footer-menu__item small"><a href="contacts.html" class="footer-menu__link">Є ідея?</a></li>
+
+
+					</ul>
+
+
+				</nav>
+
+
+				<div class="footer__info">
+
+
+					<div class="footer__tel"><i class="fa-solid fa-phone"></i><a href="tel:+380665552224">+38 066 555 22
+
+
+							24</a></div>
+
+
+				</div>
+
+
+		
+
+
+			</div>
+
+
+			<div class="footer__copyright">
+
+
+				<div class="footer__container container">
+
+
+					<p>Розробник © Камінська М.В.</p>
+
+
+				</div>
+
+
+			</div>
+
+
+		</footer>
+
+
+		
+
+
+		<div class="contact-form">
+
+
+		
+
+
+			<form class="contact-form__body" action="#">
+
+
+				<button class="fa-solid fa-xmark contact-form__close" type="button"></button>
+
+
+				<div class="contact-form__item">
+
+
+					<label for="name">Ім'я:</label>
+
+
+					<input type="text" id="name" name="name" required>
+
+
+				</div>
+
+
+				<div class="contact-form__item">
+
+
+					<label for="phone">Телефон:</label>
+
+
+					<input type="tel" id="phone" name="phone" required>
+
+
+				</div>
+
+
+				<div class="contact-form__item">
+
+
+					<label for="email">E-mail:</label>
+
+
+					<input type="tel" id="email" name="email">
+
+
+				</div>
+
+
+				<div class="contact-form__item">
+
+
+					<label for="message">Повідомлення:</label>
+
+
+					<textarea id="message" name="message">
+
+
+					</textarea>
+
+
+				</div>
+
+
+		
+
+
+		
+
+
+				<button class="contact-form__btn btn button" type="submit">Відправити</button>
+
+
+			</form>
+
+
+		</div>
+
+
+		
+
+
+		
+
+
+		<script src="js/jquery.min.js"></script>
+
+
+		<script src="js/jquery-ui.js"></script>
+
+
+		<script src="js/slick.min.js"></script>
+
+
+		<script src="js/main.js"></script>
+
+
+</body>
+
+</html>
