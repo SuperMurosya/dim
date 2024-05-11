@@ -1,5 +1,7 @@
 //const { log } = require("gulp-clean/utils");
 
+//const { log } = require("gulp-clean/utils");
+
 class MenuButton {
 	_iconClass = null;
 	_closeMenu = null
@@ -63,105 +65,192 @@ const menuMobil = new MenuButton('menu__icon', 'menu__close');
 
 
 
+
+// class KamPopUp {
+// 	_iconClass = null;
+// 	_closeMenu = null;
+// 	_classWrapper = null;
+// 	_classContent = null;
+
+// 	constructor(iconClass, classWrapper, classContent, closeMenu) {
+
+// 		if (typeof iconClass == 'string') {
+// 			this._iconClass = iconClass;
+// 		}
+// 		if (closeMenu != undefined) {
+// 			this._closeMenu = closeMenu;
+// 		}
+
+// 		if (classWrapper != undefined) {
+// 			this._classWrapper = classWrapper;
+// 		}
+// 		if (classContent != undefined) {
+// 			this._classContent = classContent;
+// 		}
+// 		this.popUp();
+// 	}
+
+// 	_blockScroll() {
+
+// 		let html = document.getElementsByTagName("html")[0];
+// 		html.classList.toggle('_scroll-block');
+
+// 	}
+
+// 	popUp() {
+
+// 		let classWrapper = null;
+// 		if (this._classWrapper) {
+// 			classWrapper = document.getElementsByClassName('contact-form')[0];
+// 		} else {
+// 			classWrapper = document.getElementsByTagName("body")[0];
+// 		}
+
+// 		let openClass;
+// 		if (this._classWrapper) {
+// 			openClass = '_' + this._classWrapper + '-open';
+// 		} else {
+// 			openClass = '_popup-open';
+// 		}
+
+
+// 		if (this._closeMenu && classWrapper != undefined) {
+// 			let closeButton = document.getElementsByClassName(this._closeMenu)[0];
+// 			if (closeButton != null) {
+// 				closeButton.addEventListener('click', () => {
+// 					classWrapper.classList.toggle(openClass);
+// 					this._blockScroll();
+// 				});
+
+// 				if (this._classContent) {
+// 					classWrapper.addEventListener('click', (e) => {
+// 						if (!e.target.closest('.' + this._classContent)) {
+// 							classWrapper.classList.toggle(openClass);
+// 							this._blockScroll();
+// 						}
+// 					});
+// 				}
+
+// 			} else {
+// 				console.log('error close button');
+
+// 			}
+
+
+
+
+// 		}
+
+
+// 		if (classWrapper != null) {
+// 			let icon = document.getElementsByClassName(this._iconClass)[0];
+
+// 			if (icon != null) {
+// 				icon.addEventListener('click', () => {
+// 					classWrapper.classList.toggle(openClass);
+// 					this._blockScroll();
+// 				});
+// 			}
+// 		}
+// 	}
+
+
+// }
+
 class KamPopUp {
-	_iconClass = null;
-	_closeMenu = null;
-	_classWrapper = null;
-	_classContent = null;
+	_iconButton = null;
+	_closeButton = '_close';
+	_classWrapperEl = null;
+	_classContentEl = null;
+	_popupOPen = "_popup-open"
 
-	constructor(iconClass, classWrapper, classContent, closeMenu) {
 
-		if (typeof iconClass == 'string') {
-			this._iconClass = iconClass;
-		}
-		if (closeMenu != undefined) {
-			this._closeMenu = closeMenu;
+	constructor(iconButton, classWrapperEl, classContentEl, closeButton) {
+
+		if (typeof iconButton == 'string') {
+			this._iconButton = iconButton;
 		}
 
-		if (classWrapper != undefined) {
-			this._classWrapper = classWrapper;
+		if (typeof closeButton == 'string') {
+			this._closeButton = closeButton;
 		}
-		if (classContent != undefined) {
-			this._classContent = classContent;
+
+		if (typeof classWrapperEl == 'string') {
+			this._classWrapperEl = classWrapperEl;
+		}
+
+		if (typeof classContentEl == 'string') {
+			this._classContentEl = classContentEl;
 		}
 		this.popUp();
+
+
 	}
 
-	_blockScroll() {
-
+	_blockScroll(i) {
 		let html = document.getElementsByTagName("html")[0];
-		html.classList.toggle('_scroll-block');
+		if (i == true) {
+			html.classList.add('_scroll-block');
+		} else {
+			html.classList.remove('_scroll-block');
+		}
+
+
 
 	}
 
 	popUp() {
 
-		let classWrapper = null;
-		if (this._classWrapper) {
-			classWrapper = document.getElementsByClassName('contact-form')[0];
-		} else {
-			classWrapper = document.getElementsByTagName("body")[0];
-		}
-
-		let openClass;
-		if (this._classWrapper) {
-			openClass = '_' + this._classWrapper + '-open';
-		} else {
-			openClass = '_popup-open';
-		}
+		let classWrapperEl = document.getElementsByClassName(this._classWrapperEl)[0];
+		let openClass = this._popupOPen;
 
 
-		if (this._closeMenu && classWrapper != undefined) {
-			let closeButton = document.getElementsByClassName(this._closeMenu)[0];
+		if (classWrapperEl != null) {
+
+			let closeButton = classWrapperEl.getElementsByClassName(this._closeButton)[0];
 			if (closeButton != null) {
+
 				closeButton.addEventListener('click', () => {
-					classWrapper.classList.toggle(openClass);
-					this._blockScroll();
+					classWrapperEl.classList.remove(openClass);
+					this._blockScroll(false);
 				});
-
-				if (this._classContent) {
-					classWrapper.addEventListener('click', (e) => {
-						if (!e.target.closest('.' + this._classContent)) {
-							classWrapper.classList.toggle(openClass);
-							this._blockScroll();
-						}
-					});
-				}
-
-			} else {
-				console.log('error close button');
-
 			}
 
 
-
-
+			if (classWrapperEl != null) {
+				classWrapperEl.addEventListener('click', (e) => {
+					if (!e.target.closest('.' + this._classContentEl)) {
+						classWrapperEl.classList.remove(openClass);
+						this._blockScroll(false);
+					}
+				});
+			}
 		}
 
 
-		if (this._iconClass && classWrapper != undefined) {
+		if (this._iconButton && classWrapperEl != null) {
 
-			let icon = document.getElementsByClassName(this._iconClass)[0];
-
+			let icon = document.getElementsByClassName(this._iconButton)[0];
 
 			if (icon != null) {
 				icon.addEventListener('click', () => {
-					classWrapper.classList.toggle(openClass);
-					this._blockScroll();
+					classWrapperEl.classList.add(openClass);
+					this._blockScroll(true);
 				});
 			}
-
 		}
 	}
 
-
 }
+
+
 
 
 
 const dimPopUp = new KamPopUp('header__button', 'contact-form', 'contact-form__body', 'contact-form__close');
 
 const dimPopUp2 = new KamPopUp('pass__application', 'contact-form', 'contact-form__body', 'contact-form__close');
+
 
 
 /*slick slider */
@@ -228,30 +317,34 @@ $('.popular__body').slick({
  * @returns {MutationObserver}
  */
 function createObserver(selector, callback, mutationType, time) {
-	element = document.querySelector(selector);
-	var config = { attributes: true, childList: true, subtree: true };
-	if (mutationType === undefined) {
-		mutationType = ['childList', 'attributes'];
-	}
-	if (!Array.isArray(mutationType)) {
-		mutationType = [mutationType];
-	}
-	if (typeof time == 'undefined') {
-		time = 1000;
-	}
-	var mutationCallback = function (mutationsList, observer) {
-		for (var mutation of mutationsList) {
-			if (mutationType.indexOf(mutation.type) != -1) {
-				/* Запускаем переданную функцию */
-				if (typeof callback === 'function' /*&& checkTimeStamp(time)*/) {
-					callback(observer);
+	var result = null;
+	var element = document.querySelector(selector);
+	if (element != null) {
+		var config = { attributes: true, childList: true, subtree: true };
+		if (mutationType === undefined) {
+			mutationType = ['childList', 'attributes'];
+		}
+		if (!Array.isArray(mutationType)) {
+			mutationType = [mutationType];
+		}
+		if (typeof time == 'undefined') {
+			time = 1000;
+		}
+		var mutationCallback = function (mutationsList, observer) {
+			for (var mutation of mutationsList) {
+				if (mutationType.indexOf(mutation.type) != -1) {
+					/* Запускаем переданную функцию */
+					if (typeof callback === 'function' /*&& checkTimeStamp(time)*/) {
+						callback(observer);
+					}
 				}
 			}
-		}
-	};
-	var observer = new MutationObserver(mutationCallback);
-	observer.observe(element, config);
-	return observer;
+		};
+		var observer = new MutationObserver(mutationCallback);
+		observer.observe(element, config);
+		result = observer;
+	}
+	return result;
 
 	/* Later, you can stop observing */
 	/*    observer.disconnect();*/
